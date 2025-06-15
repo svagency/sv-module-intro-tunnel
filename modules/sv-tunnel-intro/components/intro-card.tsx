@@ -44,7 +44,7 @@ export function IntroCard({ theme, iconVariant = "a" }: ExtendedIntroCardProps) 
 
               <div className="space-y-4 text-lg sm:text-xl description-text max-w-lg text-center lg:text-left">
                 <p>
-                  This application demonstrates a staged startup sequence. Performance tracking is part of a modular
+                  This SV application demonstrates a staged startup sequence. Performance tracking is part of a modular
                   system.
                 </p>
                 <p className="text-base opacity-75">Below is a test integration of the simplified icon component.</p>

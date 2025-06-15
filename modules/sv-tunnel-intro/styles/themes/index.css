@@ -29,6 +29,93 @@
   opacity: 1 !important;
 }
 
+/* LUXURY SUBTLE EFFECTS FOR RIGHT ICON */
+.icon-container svg,
+.icon-container .icon-size,
+svg.icon-size {
+  /* Subtle luxury drop shadow */
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08))
+    drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.1)) !important;
+
+  /* Precise 1px keyline */
+  stroke: rgba(255, 255, 255, 0.15) !important;
+  stroke-width: 1px !important;
+
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform-origin: center !important;
+}
+
+/* Subtle glow background */
+.icon-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Subtle highlight rim */
+.icon-container::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border-radius: 24px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Refined hover effects */
+.icon-container:hover svg,
+.icon-container:hover .icon-size {
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.16)) drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.12))
+    drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.2)) !important;
+
+  stroke: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-1px) scale(1.01) !important;
+}
+
+.icon-container:hover::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    transparent 100%
+  );
+  opacity: 1;
+}
+
+.icon-container:hover::after {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  opacity: 0.8;
+}
+
 /* Living drop shadow effect for icons */
 @keyframes livingDropShadow {
   0%,
@@ -47,29 +134,95 @@
   animation: livingDropShadow 5s ease-in-out infinite;
 }
 
-/* Common sizing classes */
+/* Enhanced drop shadow and keyline for other SVG icons */
+.logo-size,
+.tunnel-icon {
+  /* Beautiful layered drop shadow */
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.05)) drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 16px 32px rgba(0, 0, 0, 0.08)) drop-shadow(0px 32px 64px rgba(0, 0, 0, 0.04));
+
+  /* Subtle keyline border effect */
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 0.5px;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-size:hover {
+  /* Enhanced hover state */
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 24px 48px rgba(0, 0, 0, 0.12)) drop-shadow(0px 48px 96px rgba(0, 0, 0, 0.06));
+
+  stroke: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Pixel-perfect sizing classes */
 .welcome-title {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
+  line-height: 1.2;
+  /* Align to 10px grid */
+  margin-bottom: 20px;
 }
 
 .genesis-title {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
+  line-height: 1.2;
 }
 
 .description-text {
   font-size: clamp(0.875rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  /* Align to 10px grid */
+  margin-bottom: 30px;
 }
 
 .logo-size {
-  height: clamp(2.5rem, 4vw, 3.5rem);
+  height: 50px; /* 5 * 10px */
   width: auto;
 }
 
 .icon-size {
-  width: clamp(16rem, 20vw, 20rem);
-  height: clamp(16rem, 20vw, 20rem);
+  width: 400px; /* 40 * 10px */
+  height: 400px; /* 40 * 10px */
+}
+
+/* Grid-aligned containers with perfect centering */
+.icon-container {
+  /* Precise icon container sizing with flexbox centering */
+  width: 400px !important; /* 40 * 10px */
+  height: 400px !important; /* 40 * 10px */
+  padding: 40px !important; /* 4 * 10px */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+
+  /* Subtle container styling */
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.01) 0%, transparent 70%);
+  border-radius: 20px;
+  overflow: visible !important;
+}
+
+/* Ensure SVG icons fill the container properly */
+.icon-container svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+/* Action button sizing */
+.action-button {
+  /* Precise button sizing */
+  width: 200px !important; /* 20 * 10px */
+  height: 50px !important; /* 5 * 10px */
+  padding: 0 20px !important; /* 2 * 10px horizontal */
 }
 
 /* Ensure all cards are visible by default */
@@ -80,8 +233,7 @@
 
 /* Smooth transitions for theme switching */
 .intro-card,
-.action-button,
-.icon-container {
+.action-button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
@@ -94,6 +246,25 @@
 .welcome-title,
 .genesis-title,
 .description-text {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* UNIVERSAL THEME COLOR APPLICATION */
+/* Make sure ALL icons inherit theme colors */
+.logo-size,
+.tunnel-icon,
+svg {
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+/* Make sure buttons inherit theme colors and hover states */
+.action-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.action-button:hover {
+  transform: translateY(-2px) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
@@ -111,4 +282,130 @@
 
 .theme-strip-container {
   animation: slideUpFadeIn 500ms ease-out forwards;
+}
+
+/* Grid overlay styles */
+[data-show-grid="true"] {
+  position: relative;
+}
+
+/* Theme-specific LUXURY enhanced styling */
+.theme-neo2 .icon-container svg,
+.theme-neo2 .icon-size {
+  filter: drop-shadow(0px 2px 8px rgba(168, 85, 247, 0.15)) drop-shadow(0px 8px 24px rgba(168, 85, 247, 0.08))
+    drop-shadow(0px 0px 1px rgba(168, 85, 247, 0.2)) !important;
+  stroke: rgba(168, 85, 247, 0.2) !important;
+}
+
+.theme-neo2 .icon-container::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(168, 85, 247, 0.04) 0%,
+    rgba(168, 85, 247, 0.01) 50%,
+    transparent 100%
+  );
+}
+
+.theme-neo2 .icon-container::after {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.1) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(168, 85, 247, 0.05) 100%
+  );
+}
+
+.theme-luxury .icon-container svg,
+.theme-luxury .icon-size {
+  filter: drop-shadow(0px 2px 8px rgba(212, 175, 55, 0.15)) drop-shadow(0px 8px 24px rgba(212, 175, 55, 0.08))
+    drop-shadow(0px 0px 1px rgba(212, 175, 55, 0.2)) !important;
+  stroke: rgba(212, 175, 55, 0.25) !important;
+}
+
+.theme-luxury .icon-container::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.04) 0%,
+    rgba(212, 175, 55, 0.01) 50%,
+    transparent 100%
+  );
+}
+
+.theme-luxury .icon-container::after {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.12) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(212, 175, 55, 0.06) 100%
+  );
+}
+
+.theme-pop .icon-container svg,
+.theme-pop .icon-size {
+  filter: drop-shadow(0px 2px 8px rgba(255, 255, 255, 0.2)) drop-shadow(0px 8px 24px rgba(255, 255, 255, 0.12))
+    drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.3)) !important;
+  stroke: rgba(255, 255, 255, 0.3) !important;
+}
+
+.theme-wireframe .icon-container svg,
+.theme-wireframe .icon-size {
+  stroke: rgba(0, 0, 0, 0.8) !important;
+  stroke-width: 1px !important;
+  fill: none !important;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1)) !important;
+}
+
+.theme-wireframe .icon-container::before,
+.theme-wireframe .icon-container::after {
+  display: none;
+}
+
+.theme-greyscale .icon-container svg,
+.theme-greyscale .icon-size {
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08))
+    drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.1)) !important;
+  stroke: rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-greyscale .icon-container::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.005) 50%,
+    transparent 100%
+  );
+}
+
+.theme-greyscale .icon-container::after {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+}
+
+/* Pixel-perfect breakpoints */
+@media (min-width: 768px) {
+  .intro-card {
+    max-width: 1200px; /* Maintain 12 * 100px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-card {
+    max-width: 1200px; /* Maintain 12 * 100px */
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .icon-container svg,
+  .icon-container::before,
+  .icon-container::after {
+    animation: none !important;
+  }
 }

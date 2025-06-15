@@ -1,22 +1,121 @@
 import type React from "react"
 import { cn } from "@/lib/utils"
+import {
+  AIcon,
+  FourSpaceIcon,
+  BitChainIcon,
+  AudionomiqIcon,
+  AlienIcon,
+  BSVAIcon,
+  ConveneIcon,
+  CodeIcon,
+  CoreIcon,
+  CommunioIcon,
+  DroidIcon,
+  MagazaiIcon,
+  MovaiIcon,
+  NetworkIcon,
+  SecureIcon,
+  MusaiIcon,
+  PortervanIcon,
+  SpiralIcon,
+  SvapeIcon,
+  SVIcon,
+  Svape3Icon,
+  Svape1Icon,
+  Svape2Icon,
+  TunnelIcon,
+  V0Icon,
+  VibeIcon,
+} from "./custom-icons"
 
-interface SvBuildLogoProps extends React.SVGProps<SVGSVGElement> {}
+interface SvBuildLogoProps extends React.SVGProps<SVGSVGElement> {
+  variant?:
+    | "a"
+    | "4space"
+    | "bitchain"
+    | "audionomiq"
+    | "alien"
+    | "bsva"
+    | "convene"
+    | "code"
+    | "core"
+    | "communio"
+    | "droid"
+    | "magazai"
+    | "movai"
+    | "network"
+    | "secure"
+    | "musai"
+    | "portervan"
+    | "spiral"
+    | "svape"
+    | "sv"
+    | "svape3"
+    | "svape1"
+    | "svape2"
+    | "tunnel"
+    | "v0"
+    | "vibe"
+}
 
-export const SvBuildLogo: React.FC<SvBuildLogoProps> = (props) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 480.3 159.09"
-      fill={props.fill || "currentColor"}
-      aria-label="SV Build Logo"
-      {...props}
-      className={cn(props.className)}
-    >
-      <path d="M254.72,138.81c-.66,1.31-1.31,2.63-3.29,2.63h-38.15c19.75-40.33,43.1-80.01,63.81-120.38,1.31-3.29,2.57-3.96,6.51-3.96h32.33c3.36,0,4.56.02,2.59,3.96h.01s0,0,0,0" />
-      <path d="M58.66,53.17c-1.14,2.03-.88,7.1.25,9.13,3.42,5.45,14.45,4.94,22.06,4.94l45.37,1.14c11.28.51,34.73-1.52,43.22,14.07,5.2,9.76,4.69,31.94-1.39,41.83-9.38,15.72-37.26,15.84-49.81,15.84h-61.22c-7.22,0-23.83-1.01-32.06-13.06-3.93-6.08-4.31-19.14-4.18-27.25h36.63c.88,11.28,7.48,10.39,14.45,10.39h43.47c5.2,0,15.97.25,19.27-3.8,1.52-2.03,1.52-6.08,0-9.51-2.41-4.94-12.04-4.18-22.43-4.56l-48.41-1.01c-11.79-.13-31.69.13-39.29-14.45-5.19-9.63-5.19-35.36.38-45,9.26-15.46,27.13-14.07,44.24-14.07h101.1c9.45,0,18.12,5.26,22.48,13.64l32.57,62.54-19.9,37.39-40.54-76.89c-2.19-4.16-6.51-6.76-11.21-6.76h-78.79c-5.2,0-12.8-.89-16.23,5.45Z" />
-      <path d="M462.71,83.91l-33.39-57.83c-3.24-5.6-9.22-9.06-15.69-9.06h-66.87c-6.47,0-12.45,3.45-15.69,9.06l-32.75,56.72c-3.24,5.61-3.24,12.51,0,18.12l19.91,34.49c2.16,3.74,6.14,6.04,10.46,6.04h104.28c4.31,0,8.3-2.3,10.46-6.04l19.27-33.37c3.24-5.6,3.24-12.51,0-18.12ZM422.66,91.12l-9.77,16.93c-1.09,1.9-3.12,3.06-5.3,3.06h-52.9c-2.19,0-4.21-1.17-5.3-3.06l-10.1-17.49c-1.64-2.84-1.64-6.35,0-9.19l16.61-28.77c1.64-2.84,4.67-4.59,7.96-4.59h33.92c3.28,0,6.32,1.75,7.96,4.59l16.94,29.34c1.64,2.84,1.64,6.35,0,9.19Z" />
-    </svg>
-  )
+export const SvBuildLogo: React.FC<SvBuildLogoProps> = ({ variant = "a", ...props }) => {
+  const renderLogo = () => {
+    switch (variant) {
+      case "4space":
+        return <FourSpaceIcon {...props} className={cn(props.className)} />
+      case "bitchain":
+        return <BitChainIcon {...props} className={cn(props.className)} />
+      case "audionomiq":
+        return <AudionomiqIcon {...props} className={cn(props.className)} />
+      case "alien":
+        return <AlienIcon {...props} className={cn(props.className)} />
+      case "bsva":
+        return <BSVAIcon {...props} className={cn(props.className)} />
+      case "convene":
+        return <ConveneIcon {...props} className={cn(props.className)} />
+      case "code":
+        return <CodeIcon {...props} className={cn(props.className)} />
+      case "core":
+        return <CoreIcon {...props} className={cn(props.className)} />
+      case "communio":
+        return <CommunioIcon {...props} className={cn(props.className)} />
+      case "droid":
+        return <DroidIcon {...props} className={cn(props.className)} />
+      case "magazai":
+        return <MagazaiIcon {...props} className={cn(props.className)} />
+      case "movai":
+        return <MovaiIcon {...props} className={cn(props.className)} />
+      case "network":
+        return <NetworkIcon {...props} className={cn(props.className)} />
+      case "secure":
+        return <SecureIcon {...props} className={cn(props.className)} />
+      case "musai":
+        return <MusaiIcon {...props} className={cn(props.className)} />
+      case "portervan":
+        return <PortervanIcon {...props} className={cn(props.className)} />
+      case "spiral":
+        return <SpiralIcon {...props} className={cn(props.className)} />
+      case "svape":
+        return <SvapeIcon {...props} className={cn(props.className)} />
+      case "sv":
+        return <SVIcon {...props} className={cn(props.className)} />
+      case "svape3":
+        return <Svape3Icon {...props} className={cn(props.className)} />
+      case "svape1":
+        return <Svape1Icon {...props} className={cn(props.className)} />
+      case "svape2":
+        return <Svape2Icon {...props} className={cn(props.className)} />
+      case "tunnel":
+        return <TunnelIcon {...props} className={cn(props.className)} />
+      case "v0":
+        return <V0Icon {...props} className={cn(props.className)} />
+      case "vibe":
+        return <VibeIcon {...props} className={cn(props.className)} />
+      default: // "a"
+        return <AIcon {...props} className={cn(props.className)} />
+    }
+  }
+
+  return renderLogo()
 }

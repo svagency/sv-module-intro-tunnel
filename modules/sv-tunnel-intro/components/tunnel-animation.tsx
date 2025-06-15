@@ -7,7 +7,11 @@ import type { TunnelAnimationProps } from "../types"
 const NUM_ICONS = 6
 const ANIMATION_DURATION_MS = 2500
 
-export const TunnelAnimation: React.FC<TunnelAnimationProps> = ({ theme }) => {
+interface ExtendedTunnelAnimationProps extends TunnelAnimationProps {
+  iconVariant?: string
+}
+
+export const TunnelAnimation: React.FC<ExtendedTunnelAnimationProps> = ({ theme, iconVariant = "original" }) => {
   return (
     <div
       className="fixed inset-0 flex items-center justify-center overflow-hidden z-40 tunnel-container"
@@ -33,7 +37,7 @@ export const TunnelAnimation: React.FC<TunnelAnimationProps> = ({ theme }) => {
               opacity: 0,
             }}
           >
-            <SvBuildIcon className={cn("w-[400px] h-[400px] tunnel-icon")} />
+            <SvBuildIcon variant={iconVariant as any} className={cn("w-[400px] h-[400px] tunnel-icon")} />
           </div>
         )
       })}

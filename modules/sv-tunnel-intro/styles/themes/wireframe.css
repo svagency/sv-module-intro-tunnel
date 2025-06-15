@@ -45,13 +45,17 @@ body.theme-wireframe .action-button:hover {
   color: var(--bg-primary) !important;
 }
 
+/* Apply colors to ALL icons and SVGs */
 .theme-wireframe .logo-size,
 .theme-wireframe .icon-size,
 .theme-wireframe .tunnel-icon,
+.theme-wireframe svg,
 body.theme-wireframe .logo-size,
 body.theme-wireframe .icon-size,
-body.theme-wireframe .tunnel-icon {
+body.theme-wireframe .tunnel-icon,
+body.theme-wireframe svg {
   color: var(--text-primary) !important;
+  fill: var(--text-primary) !important;
   opacity: 1 !important;
 }
 

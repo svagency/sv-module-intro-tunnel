@@ -53,6 +53,20 @@ body.theme-pop .action-button:hover {
   transform: translateY(-2px) scale(1.05) !important;
 }
 
+/* Apply colors to ALL icons and SVGs */
+.theme-pop .logo-size,
+.theme-pop .icon-size,
+.theme-pop .tunnel-icon,
+.theme-pop svg,
+body.theme-pop .logo-size,
+body.theme-pop .icon-size,
+body.theme-pop .tunnel-icon,
+body.theme-pop svg {
+  color: var(--text-primary) !important;
+  fill: var(--text-primary) !important;
+  opacity: 0.9 !important;
+}
+
 .theme-pop .welcome-title,
 .theme-pop .genesis-title,
 body.theme-pop .welcome-title,

@@ -32,8 +32,8 @@ body.theme-neo1 .icon-container {
 
 .theme-neo1 .action-button,
 body.theme-neo1 .action-button {
-  background: var(--bg-secondary) !important;
-  color: var(--text-primary) !important;
+  background: var(--text-accent) !important;
+  color: white !important;
   box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark) !important;
   border: 1px solid var(--border-color) !important;
   border-radius: 0.75rem !important;
@@ -41,17 +41,22 @@ body.theme-neo1 .action-button {
 
 .theme-neo1 .action-button:hover,
 body.theme-neo1 .action-button:hover {
+  background: #2563eb !important;
   box-shadow: -6px -6px 12px var(--shadow-light), 6px 6px 12px var(--shadow-dark) !important;
-  transform: translateY(-1px) !important;
+  transform: translateY(-2px) !important;
 }
 
+/* Apply colors to ALL icons and SVGs */
 .theme-neo1 .logo-size,
 .theme-neo1 .icon-size,
 .theme-neo1 .tunnel-icon,
+.theme-neo1 svg,
 body.theme-neo1 .logo-size,
 body.theme-neo1 .icon-size,
-body.theme-neo1 .tunnel-icon {
+body.theme-neo1 .tunnel-icon,
+body.theme-neo1 svg {
   color: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
   opacity: 0.8 !important;
 }
 

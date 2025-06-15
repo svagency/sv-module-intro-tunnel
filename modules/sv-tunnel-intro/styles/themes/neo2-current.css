@@ -1,5 +1,6 @@
 /* Neo 2 - Current Dark Sophisticated */
-.theme-neo2 {
+.theme-neo2,
+body.theme-neo2 {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
@@ -14,14 +15,16 @@
   color: var(--text-primary) !important;
 }
 
-.theme-neo2 .intro-card {
+.theme-neo2 .intro-card,
+body.theme-neo2 .intro-card {
   background: linear-gradient(to bottom right, #1f2937, #111827, #000000) !important;
   box-shadow: -5px -5px 15px var(--shadow-light), 5px 5px 15px var(--shadow-dark) !important;
   border: 1px solid var(--border-color) !important;
   color: var(--text-primary) !important;
 }
 
-.theme-neo2 .icon-container {
+.theme-neo2 .icon-container,
+body.theme-neo2 .icon-container {
   background: linear-gradient(to bottom right, #1f2937, #111827, #000000) !important;
   box-shadow: -5px -5px 15px var(--shadow-light), 5px 5px 15px var(--shadow-dark) !important;
   border: 1px solid var(--border-color) !important;
@@ -29,36 +32,51 @@
   padding: 1rem !important;
 }
 
-.theme-neo2 .action-button {
-  background-color: #581c87 !important;
-  color: #e9d5ff !important;
+.theme-neo2 .action-button,
+body.theme-neo2 .action-button {
+  background: var(--text-accent) !important;
+  color: white !important;
   box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light) !important;
   border-radius: 0.75rem !important;
   border: none !important;
 }
 
-.theme-neo2 .action-button:hover {
-  background-color: #6b21a8 !important;
+.theme-neo2 .action-button:hover,
+body.theme-neo2 .action-button:hover {
+  background: #9333ea !important;
   box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light) !important;
 }
 
-.theme-neo2 .tunnel-container {
+.theme-neo2 .tunnel-container,
+body.theme-neo2 .tunnel-container {
   background-color: rgba(17, 24, 39, 1) !important;
 }
 
-.theme-neo2 .tunnel-icon {
+/* Apply colors to ALL icons and SVGs */
+.theme-neo2 .logo-size,
+.theme-neo2 .icon-size,
+.theme-neo2 .tunnel-icon,
+.theme-neo2 svg,
+body.theme-neo2 .logo-size,
+body.theme-neo2 .icon-size,
+body.theme-neo2 .tunnel-icon,
+body.theme-neo2 svg {
   color: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
   opacity: 0.75 !important;
 }
 
 .theme-neo2 .welcome-title,
-.theme-neo2 .genesis-title {
+.theme-neo2 .genesis-title,
+body.theme-neo2 .welcome-title,
+body.theme-neo2 .genesis-title {
   background: linear-gradient(to right, var(--text-accent), var(--text-accent-secondary)) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
 }
 
-.theme-neo2 .description-text {
+.theme-neo2 .description-text,
+body.theme-neo2 .description-text {
   color: var(--text-secondary) !important;
 }

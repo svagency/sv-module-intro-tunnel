@@ -1,0 +1,114 @@
+/* Import all theme files */
+@import "./neo1-minimal.css";
+@import "./neo2-current.css";
+@import "./neo3-advanced.css";
+@import "./wireframe.css";
+@import "./greyscale.css";
+@import "./pop.css";
+@import "./luxury.css";
+
+/* Common animations and base styles */
+@keyframes cardIntroAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-card-intro {
+  animation: cardIntroAnimation 800ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: transform, opacity;
+  opacity: 1 !important;
+}
+
+/* Living drop shadow effect for icons */
+@keyframes livingDropShadow {
+  0%,
+  100% {
+    filter: drop-shadow(0px 12px 25px rgba(200, 160, 255, 0.12)) drop-shadow(0px 6px 15px rgba(220, 190, 255, 0.08));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0px 20px 50px rgba(200, 160, 255, 0.2)) drop-shadow(0px 10px 30px rgba(220, 190, 255, 0.15))
+      drop-shadow(0 0 35px rgba(170, 100, 255, 0.18));
+    transform: scale(1.025);
+  }
+}
+
+.living-drop-shadow-effect {
+  animation: livingDropShadow 5s ease-in-out infinite;
+}
+
+/* Common sizing classes */
+.welcome-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+}
+
+.genesis-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+}
+
+.description-text {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+}
+
+.logo-size {
+  height: clamp(2.5rem, 4vw, 3.5rem);
+  width: auto;
+}
+
+.icon-size {
+  width: clamp(16rem, 20vw, 20rem);
+  height: clamp(16rem, 20vw, 20rem);
+}
+
+/* Ensure all cards are visible by default */
+.intro-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Smooth transitions for theme switching */
+.intro-card,
+.action-button,
+.icon-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Remove any conflicting Tailwind styles */
+.intro-card * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure text colors apply properly */
+.welcome-title,
+.genesis-title,
+.description-text {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Theme strip animations */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-strip-container {
+  animation: slideUpFadeIn 500ms ease-out forwards;
+}

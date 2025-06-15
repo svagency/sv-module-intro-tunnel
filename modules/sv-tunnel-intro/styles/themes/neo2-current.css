@@ -1,0 +1,64 @@
+/* Neo 2 - Current Dark Sophisticated */
+.theme-neo2 {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-accent: #a855f7;
+  --text-accent-secondary: #ec4899;
+  --border-color: rgba(70, 78, 92, 0.2);
+  --shadow-light: rgba(60, 60, 75, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom right, #1f2937, #111827, #000000) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-neo2 .intro-card {
+  background: linear-gradient(to bottom right, #1f2937, #111827, #000000) !important;
+  box-shadow: -5px -5px 15px var(--shadow-light), 5px 5px 15px var(--shadow-dark) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-neo2 .icon-container {
+  background: linear-gradient(to bottom right, #1f2937, #111827, #000000) !important;
+  box-shadow: -5px -5px 15px var(--shadow-light), 5px 5px 15px var(--shadow-dark) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 1.5rem !important;
+  padding: 1rem !important;
+}
+
+.theme-neo2 .action-button {
+  background-color: #581c87 !important;
+  color: #e9d5ff !important;
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light) !important;
+  border-radius: 0.75rem !important;
+  border: none !important;
+}
+
+.theme-neo2 .action-button:hover {
+  background-color: #6b21a8 !important;
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light) !important;
+}
+
+.theme-neo2 .tunnel-container {
+  background-color: rgba(17, 24, 39, 1) !important;
+}
+
+.theme-neo2 .tunnel-icon {
+  color: var(--text-accent) !important;
+  opacity: 0.75 !important;
+}
+
+.theme-neo2 .welcome-title,
+.theme-neo2 .genesis-title {
+  background: linear-gradient(to right, var(--text-accent), var(--text-accent-secondary)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.theme-neo2 .description-text {
+  color: var(--text-secondary) !important;
+}

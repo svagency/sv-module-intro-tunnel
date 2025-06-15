@@ -1,0 +1,88 @@
+/* Wireframe - Minimal Lines Only */
+.theme-wireframe,
+body.theme-wireframe {
+  --bg-primary: #ffffff;
+  --bg-secondary: transparent;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-accent: #000000;
+  --border-color: #000000;
+  --border-light: #cccccc;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: "Courier New", monospace !important;
+}
+
+.theme-wireframe .intro-card,
+body.theme-wireframe .intro-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 2px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-wireframe .icon-container,
+body.theme-wireframe .icon-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 0 !important;
+  padding: 1rem !important;
+}
+
+.theme-wireframe .action-button,
+body.theme-wireframe .action-button {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 0 !important;
+}
+
+.theme-wireframe .action-button:hover,
+body.theme-wireframe .action-button:hover {
+  background: var(--border-color) !important;
+  color: var(--bg-primary) !important;
+}
+
+.theme-wireframe .logo-size,
+.theme-wireframe .icon-size,
+.theme-wireframe .tunnel-icon,
+body.theme-wireframe .logo-size,
+body.theme-wireframe .icon-size,
+body.theme-wireframe .tunnel-icon {
+  color: var(--text-primary) !important;
+  opacity: 1 !important;
+}
+
+.theme-wireframe .welcome-title,
+.theme-wireframe .genesis-title,
+body.theme-wireframe .welcome-title,
+body.theme-wireframe .genesis-title {
+  color: var(--text-primary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+.theme-wireframe .description-text,
+body.theme-wireframe .description-text {
+  color: var(--text-secondary) !important;
+}
+
+.theme-wireframe::before,
+body.theme-wireframe::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}

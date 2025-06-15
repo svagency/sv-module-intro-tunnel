@@ -1,0 +1,90 @@
+/* Neo 3 - Advanced Over-the-Top */
+.theme-neo3 {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-accent: #ff6b6b;
+  --text-accent-secondary: #4ecdc4;
+  --text-accent-tertiary: #ffe66d;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-dark: rgba(0, 0, 0, 0.8);
+  --glow-primary: rgba(255, 107, 107, 0.3);
+  --glow-secondary: rgba(78, 205, 196, 0.3);
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-neo3 .intro-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%) !important;
+  box-shadow:
+    -10px -10px 30px var(--shadow-light),
+    10px 10px 30px var(--shadow-dark),
+    inset -2px -2px 10px rgba(255, 255, 255, 0.02),
+    inset 2px 2px 10px rgba(0, 0, 0, 0.5),
+    0 0 50px var(--glow-primary) !important;
+  border: 2px solid var(--border-color) !important;
+  backdrop-filter: blur(10px) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-neo3 .icon-container {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%) !important;
+  box-shadow:
+    -8px -8px 20px var(--shadow-light),
+    8px 8px 20px var(--shadow-dark),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.02),
+    inset 1px 1px 5px rgba(0, 0, 0, 0.5),
+    0 0 30px var(--glow-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 2rem !important;
+  padding: 1.5rem !important;
+}
+
+.theme-neo3 .action-button {
+  background: linear-gradient(135deg, var(--text-accent) 0%, var(--text-accent-secondary) 100%) !important;
+  color: var(--text-primary) !important;
+  box-shadow:
+    -6px -6px 15px var(--shadow-light),
+    6px 6px 15px var(--shadow-dark),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+    0 0 20px var(--glow-primary) !important;
+  border-radius: 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-neo3 .action-button:hover {
+  box-shadow:
+    -8px -8px 20px var(--shadow-light),
+    8px 8px 20px var(--shadow-dark),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+    0 0 30px var(--glow-primary) !important;
+  transform: translateY(-2px) !important;
+}
+
+.theme-neo3 .tunnel-container {
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%) !important;
+}
+
+.theme-neo3 .tunnel-icon {
+  color: var(--text-accent) !important;
+  opacity: 0.8 !important;
+  filter: drop-shadow(0 0 20px var(--glow-primary)) !important;
+}
+
+.theme-neo3 .welcome-title,
+.theme-neo3 .genesis-title {
+  background: linear-gradient(45deg, var(--text-accent), var(--text-accent-secondary), var(--text-accent-tertiary)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  text-shadow: 0 0 30px var(--glow-primary) !important;
+}
+
+.theme-neo3 .description-text {
+  color: var(--text-secondary) !important;
+}
